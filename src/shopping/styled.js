@@ -5,6 +5,8 @@ export const Container = styled.div`
   height: 100vh;
   align-items: center;
   justify-content: center;
+  user-select: none;
+  font-family: "Rubik", sans-serif;
   :before {
     display: block;
     position: fixed;
@@ -141,11 +143,11 @@ export const Name = styled.div`
   margin: 26px 0 20px;
   line-height: 1.5;
   &.Cart {
-    width: 150px;
+    width: 100%;
     font-size: 14px;
     font-weight: bold;
     line-height: 1.5;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 `;
 export const Subtitle = styled.div`
@@ -165,6 +167,11 @@ export const Price = styled.div`
   display: flex;
   font-size: 18px;
   font-weight: bold;
+  &.Cart {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
 `;
 export const AddCart = styled.button`
   display: flex;
@@ -183,17 +190,28 @@ export const AddCart = styled.button`
   overflow: hidden;
   user-select: none;
   cursor: pointer;
+  :hover {
+    background-color: #f8d43f;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  }
+  :active {
+    position: relative;
+    top: -1px;
+  }
 `;
 export const CartItems = styled.div`
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
 `;
 export const CartItem = styled.div`
   display: flex;
+  align-items: center;
   margin-bottom: 20px;
 `;
 export const InfoSneaker = styled.div`
   display: flex;
+  width: 170px;
   flex-direction: column;
 `;
 export const PhotoCart = styled.div`
@@ -204,7 +222,7 @@ export const PhotoCart = styled.div`
   height: 90px;
   border-radius: 50%;
   background-color: #eee;
-  margin-right: 34px;
+  margin-right: 30px;
   img {
     display: flex;
     align-items: center;
@@ -213,4 +231,11 @@ export const PhotoCart = styled.div`
     transform: rotate(-30deg) translateY(-20px);
     filter: drop-shadow(0 30px 20px rgba(0, 0, 0, 0.2));
   }
+`;
+export const Total = styled.div`
+  display: flex;
+  margin-left: auto;
+  margin-top: auto;
+  padding: 20px;
+  font-weight: 700;
 `;
