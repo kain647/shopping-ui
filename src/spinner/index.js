@@ -37,14 +37,14 @@ class Spinner extends React.Component {
   };
 
   render() {
-    const { value } = this.state;
+    const { value, dec, inc } = this.props;
     return (
       <SpinnerContainer>
-        <SpinnerButton onClick={this.dec}>
+        <SpinnerButton onClick={dec}>
           <FiChevronLeft />
         </SpinnerButton>
         <SpinnerValue>{value}</SpinnerValue>
-        <SpinnerButton onClick={this.inc}>
+        <SpinnerButton onClick={inc}>
           <FiChevronRight />
         </SpinnerButton>
       </SpinnerContainer>
