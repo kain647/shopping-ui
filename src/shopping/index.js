@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-//import { FiCheck } from "react-icons/fi";
 import {
   Container,
   LeftBlock,
@@ -34,7 +33,6 @@ const Shopping = () => {
         "The iconic Nike Air Zoom Pegasus 36 offers more cooling and mesh that targets breathability across high-heat areas. A slimmer heel collar and tongue reduce bulk, while exposed cables give you a snug fit at higher speeds.",
       price: "108.97",
     },
-
     "nike-pegasus": {
       bg: "#4d317f",
       image: "pegasus.png",
@@ -124,7 +122,6 @@ const Shopping = () => {
   const addItemToCart = (id) => {
     if (cart[id]) {
       const currentAmount = cart[id];
-
       updateCart({
         ...cart,
         [id]: currentAmount + 1,
@@ -149,7 +146,7 @@ const Shopping = () => {
   let cartTotal = cartIDs.reduce((acc, id) => {
     const amount = cart[id];
     const { price } = sneakersDB[id];
-    console.log({ amount, price });
+    //console.log({ amount, price });
     acc += amount * price;
     return acc;
   }, 0);
